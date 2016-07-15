@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B058E391-998E-4B79-B502-0206624F023D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Routecraft</RootNamespace>
+    <AssemblyName>Routecraft</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataReader.cs" />
+    <Compile Include="DataWriter.cs" />
+    <Compile Include="ExtendedListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedListView.Designer.cs">
+      <DependentUpon>ExtendedListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Minecraft\BlockEntity.cs" />
+    <Compile Include="Minecraft\Chunk.cs" />
+    <Compile Include="Minecraft\ChunkBufferPool.cs" />
+    <Compile Include="Minecraft\Dimension.cs" />
+    <Compile Include="Minecraft\DimensionType.cs" />
+    <Compile Include="Minecraft\EntityType.cs" />
+    <Compile Include="Minecraft\ItemDatabase.cs" />
+    <Compile Include="Minecraft\ItemDescriptor.cs" />
+    <Compile Include="Minecraft\ItemType.cs" />
+    <Compile Include="Minecraft\MinecraftDatabase.cs" />
+    <Compile Include="Minecraft\MinecraftItemDatabase.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EnchantItemPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PluginMessagePacket.cs" />
+    <Compile Include="Minecraft\Region.cs" />
+    <Compile Include="Minecraft\Storage\Debugging\NBTContainerTagProxy.cs" />
+    <Compile Include="Minecraft\Storage\NBTByteArrayTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTByteTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTCompoundTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTContainerTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTDoubleTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTEndTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTFile.cs" />
+    <Compile Include="Minecraft\Storage\NBTFloatTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTIntTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTListTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTLongTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTReader.cs" />
+    <Compile Include="Minecraft\Storage\NBTShortTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTStringTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTTagType.cs" />
+    <Compile Include="Minecraft\Storage\NBTValueTag.cs" />
+    <Compile Include="Minecraft\Storage\NBTWriter.cs" />
+    <Compile Include="Minecraft\Networking\ClientPacketMap.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityPaintingPacket.cs" />
+    <Compile Include="Minecraft\Networking\IMinecraftRelay.cs" />
+    <Compile Include="Minecraft\Networking\MinecraftRelayAction.cs" />
+    <Compile Include="Minecraft\Networking\Packets\AnimationPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\AttachEntityPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\BedPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\BlockChangePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\BlockDigPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\BlockItemSwitchPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\ChatPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\CloseWindowPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\CollectPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\CreativeSetSlotPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\DestroyEntityPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\DisconnectPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\DoorChangePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityActionPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityEffectPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityExpOrbPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityLookPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityMetadataPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityStatusPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityTeleportPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\ExperiencePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\ExplosionPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\FlyingPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\HandshakeClientPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\ItemPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\LoginRequestPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\MapChunkPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\MapDataPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\MultiBlockChangePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\NamedEntitySpawnPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\OpenWindowPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PacketType.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlacePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerLookMoveClientPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerLookPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerPositionPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayNoteBlockPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\RelEntityMoveLookPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\RelEntityMovePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\EntityVelocityPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\HandshakeServerPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\KeepAlivePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\LoginAcceptedPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\Metadata.cs" />
+    <Compile Include="Minecraft\Networking\Packets\MobSpawnPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\IPacket.cs" />
+    <Compile Include="Minecraft\Networking\MinecraftRelay.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PickupSpawnPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerInventoryPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\RemoveEntityEffectPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\RespawnPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\ServerPingPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\SetSlotPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\SleepPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\SpawnPositionPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\StatisticPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\TransactionPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\UpdateHealthPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\UpdateProgressbarPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\UpdateSignPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\UpdateTimePacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\UseEntityPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\VehicleSpawnPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\WeatherPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\WindowClickPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\WindowItemsPacket.cs" />
+    <Compile Include="Minecraft\Networking\ServerPacketMap.cs" />
+    <Compile Include="Minecraft\PacketHandlers\MapChunk\XRayPacketHandler.cs" />
+    <Compile Include="Minecraft\PacketHandlers\RelayPacketHandler.cs" />
+    <Compile Include="Minecraft\Storage\Regions\RegionFileReader.cs" />
+    <Compile Include="Minecraft\Storage\Regions\RegionFileWriter.cs" />
+    <Compile Include="Minecraft\TextColors.cs" />
+    <Compile Include="Minecraft\World.cs" />
+    <Compile Include="Minecraft\MobType.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerInfoPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PlayerLookMoveServerPacket.cs" />
+    <Compile Include="Minecraft\Networking\Packets\PreChunkPacket.cs" />
+    <Compile Include="Minecraft\Networking\PacketMap.cs" />
+    <Compile Include="Minecraft\WorldBackupCreator.cs" />
+    <Compile Include="Relay.cs" />
+    <Compile Include="Routecraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routecraft.Designer.cs">
+      <DependentUpon>Routecraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vector3I.cs" />
+    <Compile Include="WorkerThread.cs" />
+    <EmbeddedResource Include="Routecraft.resx">
+      <DependentUpon>Routecraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignModificationDialog.resx">
+      <DependentUpon>SignModificationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SignModificationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignModificationDialog.Designer.cs">
+      <DependentUpon>SignModificationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TcpRelay.cs" />
+    <Compile Include="TcpRelayAction.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="Vector2I.cs" />
+    <Compile Include="Vector3.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
